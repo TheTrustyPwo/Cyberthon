@@ -34,11 +34,11 @@ m3mQ20eCdg2IZCAXTVa84Obhbjj3/NdbygVFoWhqVn2fW7bWvAdv8NCKtMTdUyOK
 Immediately, we see the vulnerability: the public key being 2.
 Let's analyse the math and see how we can solve for the original message.
 
-<img src="https://latex.codecogs.com/png.latex? c = m^e \; (mod \; N)" />
-<br>
-<img src="https://latex.codecogs.com/png.latex? m^e = c + kN" /> 
+`c = m^e (mod N)`
 
-where `k` is a non-negative integer. Since `e` is extremely small in our case, we can brute force `k` to find `m`.
+`m^e = c + kN`  where `k` is a non-negative integer.
+
+Since `e` is extremely small in our case, we can brute force `k` to find `m`.
 
 This is the full solution with python:
 ```python
